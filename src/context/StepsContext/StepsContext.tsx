@@ -3,6 +3,7 @@ import { DataSteps } from "../../interfaces/StepsInterfaces"
 
 
 export type PropsStepsContext = {
+    _currentStep: number
     steps: DataSteps[]
     file: File | undefined
     trackId: string | undefined

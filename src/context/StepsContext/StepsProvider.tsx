@@ -47,7 +47,7 @@ export const StepsProvider = ({ children }: PropsStepsProvider) => {
 
     return (
         <StepsContext.Provider value={{
-            steps, file, trackId, setFile, setTrackId, initialSteps, nextStep, previousStep, cleanSteps
+            _currentStep, steps, file, trackId, setFile, setTrackId, initialSteps, nextStep, previousStep, cleanSteps
         }}>
             {children}
         </StepsContext.Provider>
