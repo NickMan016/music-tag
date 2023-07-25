@@ -62,9 +62,9 @@ export const useAPISpotify = () => {
         form.append('file', file);
         form.append('track', query);
 
-        await axios.post('http://localhost:5000/file', form)
+        await axios.post('https://music-tag-api.onrender.com/file', form)
             .then(async (response) => {
-                await axios.get(`http://localhost:5000/download/${response.data}/${file.name}`, {
+                await axios.get(`https://music-tag-api.onrender.com/download/${response.data}/${file.name}`, {
                     responseType: 'blob'
                 })
                     .then((response) => {
@@ -79,7 +79,7 @@ export const useAPISpotify = () => {
                         URL.revokeObjectURL(href);
                     });
 
-                await axios.get(`http://localhost:5000/clean/${response.data}/${file.name}`)
+                await axios.get(`https://music-tag-api.onrender.com/clean/${response.data}/${file.name}`)
                     .then((response) => {
                         MySwal.fire({
                             icon: 'success',
