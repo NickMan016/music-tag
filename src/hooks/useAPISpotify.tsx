@@ -108,6 +108,7 @@ export const useAPISpotify = () => {
     }
 
     return {
+        _currentStep,
         tracks,
         convertTrack,
         searchTrack,
